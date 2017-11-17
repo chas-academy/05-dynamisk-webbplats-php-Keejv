@@ -32,4 +32,5 @@ Temporary Items
 .vagrant/
 *.box
 
+provisioner.sh
 # End of https://www.gitignore.io/api/osx,vagrant
