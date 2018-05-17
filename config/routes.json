@@ -1,0 +1,11 @@
+{
+  "": {
+    "controller": "Default",
+    "method": "start"
+  },
+
+  "users": {
+    "controller": "Default",
+    "method": "getAll"
+  }
+}

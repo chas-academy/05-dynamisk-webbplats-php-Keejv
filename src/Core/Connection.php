@@ -1,10 +1,11 @@
-<?php 
+<?php
 
-    require_once('./utils/Singleton.php');
+    namespace Blogg\Core;
 
+    use Blogg\Utils\Singleton;
     use PDO;
 
-    class Connection extends Singleton 
+    class Connection extends Singleton
     {
         public $handler;
 
