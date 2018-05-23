@@ -1,11 +1,40 @@
 {
   "": {
-    "controller": "Default",
+    "controller": "Post",
     "method": "start"
   },
 
-  "users": {
-    "controller": "Default",
-    "method": "getAll"
+  "post/:id": {
+    "controller": "Post",
+    "method": "get",
+    "params": {
+      "id": "number"
+    }
+  },
+
+  "admin/dashboard": {
+    "controller": "Admin",
+    "method": "dashboard"
+  },
+
+  "admin/post/create": {
+    "controller": "Post",
+    "method": "create"
+  },
+
+  "admin/post/:id/edit": {
+    "controller": "Post",
+    "method": "edit",
+    "params": {
+      "id": "number"
+    }
+  },
+
+  "admin/post/:id/delete": {
+    "controller": "Post",
+    "method": "delete",
+    "params": {
+      "id": "number"
+    }
   }
 }

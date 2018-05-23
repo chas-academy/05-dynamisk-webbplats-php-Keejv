@@ -3,7 +3,7 @@
 namespace Blogg\Controllers;
 abstract class AbstractController
 {
-  public function render(string $viewPath, array $viewData)
+  public function render(string $viewPath, array $viewData = [])
   {
     extract($viewData);
 

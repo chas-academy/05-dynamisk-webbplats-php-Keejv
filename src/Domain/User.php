@@ -4,7 +4,8 @@
     class User {
         private $id;
         private $email;
-        private $username;
+        private $firstname;
+        private $surname;
 
         public function getId(): int
         {
@@ -16,8 +17,8 @@
             return $this->email;
         }
 
-        public function getUsername(): string
+        public function getName(): string
         {
-            return $this->username;
+            return $this->firstname . ' ' . $this->surname;
         }
     }
