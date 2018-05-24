@@ -1,6 +1,6 @@
 <?php
     global $assetPath;
-    if ($_SERVER['SERVER_NAME'] === 'blog.kaveh.haddad.chas.academy') {
+    if ($_SERVER['SERVER_NAME'] === 'blogg.kaveh.haddad.chas.academy') {
         $assetPath = 'http://' . $_SERVER['HTTP_HOST'] . '/web/';
     } else {
         $assetPath = 'http://' . $_SERVER['HTTP_HOST'] . '/';
