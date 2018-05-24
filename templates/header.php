@@ -48,7 +48,7 @@
                 </li>
             <?php else: ?>
                 <li class="nav-item">
-                    <a class="btn btn-outline-primary" href="/signin">Log in</a>
+                    <a class="btn btn-outline-primary" href="/login">Log in</a>
                 </li>
             <?php endif;?>
         </ul>

@@ -10,8 +10,7 @@ class ErrorController extends AbstractController
 
     public function requiresLogin(): string
     {
-        $properties = ['errorMessage' => 'You must be logged in to do that!'];
-        return $this->redirect('/signin', $properties);
+        return $this->redirect('/login');
     }
 
     public function generalError(): string

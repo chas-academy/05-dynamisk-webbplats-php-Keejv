@@ -95,13 +95,13 @@
       <?php endforeach; ?>
         <tr>
             <td align="center" colspan="8">
-              <a href="/admin/post/create">Add more tags</a>
+              <a href="/admin/tag/create">Add more tags</a>
             </td>
         </tr>
       <?php else: ?>
         <tr>
             <td align="center" colspan="8">
-              <a href="/admin/post/create">No tags here, create one?</a>
+              <a href="/admin/tag/create">No tags here, create one?</a>
             </td>
         </tr>
       <?php endif; ?>

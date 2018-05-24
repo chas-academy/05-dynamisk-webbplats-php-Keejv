@@ -19,4 +19,16 @@ class UserModel extends AbstractModel
 
     return $users;
   }
+
+  public function login(string $email, string $password)
+  {
+    $query = 'SELECT u.id, u.email, u.firstname, u.surname FROM users u WHERE email = ? AND password = ?';
+    $statement = $this->db->prepare($query);
+    $statement->setFetchMode(PDO::FETCH_CLASS, self::CLASSNAME);
+    $statement->execute([$email, $password]);
+
+    $user = $statement->fetch();
+
+    return $user;
+  }
 }

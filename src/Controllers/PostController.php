@@ -63,12 +63,10 @@ class PostController extends AbstractController
 
       return $this->render('admin/post/createpost', $viewData);
     } else {
-      // Get all of the parameters from the POST request
       $newPost = $this->request->getParams()->all();
       $postWasCreated = $this->postModel->create($newPost);
 
-      if ($postWasCreated)
-      {
+      if ($postWasCreated) {
         $this->redirect('/admin/dashboard');
       } else {
         $errorController = new ErrorController();
@@ -77,6 +75,18 @@ class PostController extends AbstractController
     }
   }
 
+  public function update(int $postId)
+  {
+    $newPost = $this->request->getParams()->all();
+
+    try {
+      $postWasUpdated = $this->postModel->update($postId, $newPost);
+    } catch (\Exception $e) {
+      return $e->getMessage();
+    }
+
+    return $this->redirect('/admin/dashboard');
+  }
 
   public function edit(int $postId)
   {

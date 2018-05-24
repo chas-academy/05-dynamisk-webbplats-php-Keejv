@@ -4,6 +4,16 @@
     "method": "start"
   },
 
+  "login": {
+    "controller": "Auth",
+    "method": "login"
+  },
+
+  "logout": {
+    "controller": "Auth",
+    "method": "logout"
+  },
+
   "post/:id": {
     "controller": "Post",
     "method": "get",
@@ -14,12 +24,14 @@
 
   "admin/dashboard": {
     "controller": "Admin",
-    "method": "dashboard"
+    "method": "dashboard",
+    "login": true
   },
 
   "admin/post/create": {
     "controller": "Post",
-    "method": "create"
+    "method": "create",
+    "login": true
   },
 
   "admin/post/:id/edit": {
@@ -27,7 +39,17 @@
     "method": "edit",
     "params": {
       "id": "number"
-    }
+    },
+    "login": true
+  },
+
+  "admin/post/:id/update": {
+    "controller": "Post",
+    "method": "update",
+    "params": {
+      "id": "number"
+    },
+    "login": true
   },
 
   "admin/post/:id/delete": {
@@ -35,6 +57,40 @@
     "method": "delete",
     "params": {
       "id": "number"
-    }
+    },
+    "login": true
+  },
+
+  "admin/tag/create": {
+    "controller": "Tag",
+    "method": "create",
+    "login": true
+  },
+
+  "admin/tag/:id/edit": {
+    "controller": "Tag",
+    "method": "edit",
+    "params": {
+      "id": "number"
+    },
+    "login": true
+  },
+
+  "admin/tag/:id/update": {
+    "controller": "Tag",
+    "method": "update",
+    "params": {
+      "id": "number"
+    },
+    "login": true
+  },
+
+  "admin/tag/:id/delete": {
+    "controller": "Tag",
+    "method": "delete",
+    "params": {
+      "id": "number"
+    },
+    "login": true
   }
 }

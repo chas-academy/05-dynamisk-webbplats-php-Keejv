@@ -1,6 +1,7 @@
 <?php
 
 namespace Blogg\Controllers;
+
 abstract class AbstractController
 {
   public function render(string $viewPath, array $viewData = [])
@@ -15,7 +16,6 @@ abstract class AbstractController
     $renderedView = ob_get_clean();
     return $renderedView;
   }
-
 
   protected function redirect(string $url, array $params = null)
   {

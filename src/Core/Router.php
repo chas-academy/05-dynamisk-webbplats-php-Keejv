@@ -60,10 +60,8 @@
 
             if (isset($info['login']) && $info['login']) {
                 $cookieHasUser = $request->getCookies()->has('user');
-                if ($cookieHasUser) {
-                    $userId = $request->getCookies()->get('user');
-                    $controller->setUserId($userId);
-                } else {
+
+                if (!$cookieHasUser) {
                     $errorController = new ErrorController($request);
                     return $errorController->requiresLogin();
                 }
