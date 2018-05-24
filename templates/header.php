@@ -55,7 +55,7 @@
     </div>
 </nav>
 
-<header class="masthead" style="background-image: url('<?php echo $assetPath . '/public/images/mountains.jpg'?>)">
+<header class="masthead" style="background-image: url('<?php echo $assetPath . 'public/images/mountains.jpg'?>)">
     <div class="overlay"></div>
     <div class="container">
         <div class="row">
